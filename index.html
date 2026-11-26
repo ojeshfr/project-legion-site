@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Legion — Unofficial Community Companion for Lenovo Legion Laptops</title>
+  <meta name="description" content="Unofficial, community-built GPL-3.0 fork of Lenovo Legion Toolkit for Windows (.NET 9, WPF). Power modes, thermals, battery care, display refresh rate, RGB keyboard, automation, and verified updates." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-link" href="#top">
+        <img class="brand-icon" src="favicon.svg" alt="Project Legion mark" width="24" height="24" />
+        <span>Project Legion</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#preview">Preview</a>
+        <a href="#telemetry">Telemetry</a>
+        <a href="#lid-reset">Lid Reset</a>
+        <a href="#features">Features</a>
+        <a href="#updater">Updater</a>
+        <a href="#download">Download</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="theme-picker" role="group" aria-label="Color theme">
+          <button type="button" class="theme-dot" data-theme="macos-light" aria-label="macOS Light theme" title="macOS Light" aria-pressed="false"></button>
+          <button type="button" class="theme-dot" data-theme="apple-dark" aria-label="Apple Dark theme" title="Apple Dark" aria-pressed="true"></button>
+          <button type="button" class="theme-dot" data-theme="titanium-mist" aria-label="Titanium Mist theme" title="Titanium Mist" aria-pressed="false"></button>
+          <button type="button" class="theme-dot" data-theme="deep-indigo" aria-label="Deep Obsidian theme" title="Deep Obsidian" aria-pressed="false"></button>
+          <button type="button" class="theme-dot" data-theme="sage-minimal" aria-label="Sage Minimal theme" title="Sage Minimal" aria-pressed="false"></button>
+        </div>
+        <a href="#download" class="btn btn-primary btn-sm" id="header-version-cta">Get 0.1.5.0</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO & INTERACTIVE APP PREVIEW -->
+    <section id="top" class="hero container">
+      <div class="hero-badge">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Unofficial Community Fork · Windows x64 · .NET 9 WPF · GPL-3.0</span>
+      </div>
+
+      <h1 class="hero-title">
+        Project Legion.<br />
+        <span class="hero-title-muted">Clean hardware control.</span>
+      </h1>
+
+      <p class="hero-pitch">
+        An unofficial, community-built fork of Lenovo Legion Toolkit for Lenovo Legion laptops: power modes, thermals and sensors, battery charge modes, display refresh rate, RGB/Spectrum keyboard lighting, mouse settings, macros, automation, packages, and a verified updater.
+      </p>
+
+      <div class="hero-cta-row">
+        <a href="#download" class="btn btn-primary btn-md">Download for Windows</a>
+        <a href="#telemetry" class="btn btn-secondary btn-md">Explore Telemetry Policy</a>
+      </div>
+
+      <p class="hero-disclaimer">
+        Not affiliated with or endorsed by Lenovo. Built on the GPL-3.0 <a class="footer-link" href="https://github.com/LenovoLegionToolkit-Team/LenovoLegionToolkit" target="_blank" rel="noopener noreferrer">Lenovo Legion Toolkit</a> project.
+      </p>
+
+      <!-- INTERACTIVE APP PREVIEW -->
+      <div id="preview" class="app-preview-wrap" aria-label="Interactive Project Legion application preview">
+        <div class="app-window">
+          <div class="app-titlebar">
+            <div class="app-title-left">
+              <img src="favicon.svg" alt="" width="18" height="18" aria-hidden="true" />
+              <span class="app-title-name">Project Legion</span>
+              <span class="app-title-tag mono" id="preview-version-tag">0.1.5.0 · Simulated UI</span>
+            </div>
+
+            <div class="app-title-controls">
+              <div class="segmented" role="group" aria-label="Display refresh rate">
+                <button type="button" class="seg-btn seg-btn-card hz-pill" data-hz="60" aria-pressed="false">60 Hz</button>
+                <button type="button" class="seg-btn seg-btn-card hz-pill" data-hz="165" aria-pressed="true">165 Hz</button>
+              </div>
+              <div class="segmented" role="group" aria-label="Power mode">
+                <button type="button" class="seg-btn hero-mode" data-mode="Quiet" aria-pressed="false">Quiet</button>
+                <button type="button" class="seg-btn hero-mode" data-mode="Balanced" aria-pressed="true">Balanced</button>
+                <button type="button" class="seg-btn hero-mode" data-mode="Performance" aria-pressed="false">Performance</button>
+                <button type="button" class="seg-btn hero-mode" data-mode="Custom" aria-pressed="false">Custom</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-body">
+            <aside class="app-sidebar" aria-label="Preview navigation">
+              <div>
+                <div class="sidebar-group-label">System</div>
+                <div class="sidebar-list" role="group" aria-label="System pages">
+                  <button type="button" class="sidebar-item" data-page="overview" aria-pressed="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+                    <span>Overview</span>
+                  </button>
+                  <button type="button" class="sidebar-item" data-page="thermals" aria-pressed="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+                    <span>Thermals</span>
+                    <span class="sidebar-badge mono tabular-nums" id="nav-temp-badge">56°</span>
+                  </button>
+                  <button type="button" class="sidebar-item" data-page="battery" aria-pressed="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 11v2"/></svg>
+                    <span>Battery</span>
+                    <span class="sidebar-badge mono tabular-nums">80%</span>
+                  </button>
+                  <button type="button" class="sidebar-item" data-page="display" aria-pressed="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                    <span>Display</span>
+                  </button>
+                </div>
+
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-group-label">Peripherals</div>
+                <div class="sidebar-list" role="group" aria-label="Peripherals and automation pages">
+                  <button type="button" class="sidebar-item" data-page="keyboard" aria-pressed="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></svg>
+                    <span>Keyboard</span>
+                  </button>
+                  <button type="button" class="sidebar-item" data-page="mouse" aria-pressed="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="6"/><path d="M12 7v4"/></svg>
+                    <span>Mouse</span>
+                  </button>
+                  <button type="button" class="sidebar-item" data-page="automation" aria-pressed="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+                    <span>Automation</span>
+                  </button>
+                  <button type="button" class="sidebar-item" data-page="packages" aria-pressed="false">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7 12 12l8.7-5"/><path d="M12 22V12"/></svg>
+                    <span>Packages</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="sidebar-theme-foot">
+                <span>Theme</span>
+                <span id="active-theme-name">Apple Dark</span>
+              </div>
+            </aside>
+
+            <div class="app-workspace">
+              <div class="workspace-header">
+                <div>
+                  <h2 class="workspace-title" id="preview-page-title">Overview</h2>
+                  <p class="workspace-subtitle" id="preview-mode-sub">Balanced · Quiet cooling &amp; adaptive clocks</p>
+                </div>
+                <span class="pill-badge pill-subtle mono" id="preview-hz-badge">Panel · 165 Hz</span>
+              </div>
+
+              <div class="telemetry-grid">
+                <div class="metric-card">
+                  <div class="metric-head">
+                    <span>CPU Package</span>
+                    <span class="mono tabular-nums" id="h-cpu-util">24%</span>
+                  </div>
+                  <div class="metric-val mono tabular-nums" id="h-cpu-t">56°</div>
+                  <svg viewBox="0 0 80 18" class="sparkline" aria-hidden="true">
+                    <polygon id="h-cpu-area" fill="var(--accent)" opacity="0.16" points="0,18 0,12 10,11 20,13 30,9 40,10 50,8 60,11 70,9 80,10 80,18" />
+                    <polyline id="h-cpu-line" fill="none" stroke="var(--accent-text)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" points="0,12 10,11 20,13 30,9 40,10 50,8 60,11 70,9 80,10" />
+                  </svg>
+                  <div class="metric-sub mono tabular-nums" id="h-cpu-sub">3.8 GHz · 28 W</div>
+                </div>
+
+                <div class="metric-card">
+                  <div class="metric-head">
+                    <span>NVIDIA GPU</span>
+                    <span class="mono tabular-nums" id="h-gpu-util">12%</span>
+                  </div>
+                  <div class="metric-val mono tabular-nums" id="h-gpu-t">47°</div>
+                  <svg viewBox="0 0 80 18" class="sparkline" aria-hidden="true">
+                    <polygon id="h-gpu-area" fill="var(--ok)" opacity="0.16" points="0,18 0,14 10,14 20,13 30,13 40,12 50,13 60,11 70,12 80,12 80,18" />
+                    <polyline id="h-gpu-line" fill="none" stroke="var(--ok-text)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" points="0,14 10,14 20,13 30,13 40,12 50,13 60,11 70,12 80,12" />
+                  </svg>
+                  <div class="metric-sub mono tabular-nums" id="h-gpu-sub">1.4 GHz · 18 W</div>
+                </div>
+
+                <div class="metric-card">
+                  <div class="metric-head">
+                    <span>Cooling Fans</span>
+                    <span id="h-fan-tag">Auto</span>
+                  </div>
+                  <div class="metric-val mono tabular-nums" id="h-rpm">2,100</div>
+                  <div class="bar-track" aria-hidden="true">
+                    <div class="bar-fill" id="h-fan-bar" style="width: 42%;"></div>
+                  </div>
+                  <div class="metric-sub mono tabular-nums" id="h-fan-sub">RPM · Balanced</div>
+                </div>
+
+                <div class="metric-card">
+                  <div class="metric-head">
+                    <span>Battery</span>
+                    <span class="pill-badge pill-ok">AC</span>
+                  </div>
+                  <div class="metric-val mono tabular-nums">80%</div>
+                  <div class="bar-track" aria-hidden="true">
+                    <div class="bar-fill bar-fill-ok" style="width: 80%;"></div>
+                  </div>
+                  <div class="metric-sub">Conservation mode</div>
+                </div>
+              </div>
+
+              <div class="workspace-inset">
+                <span id="preview-context-note" class="workspace-inset-note">Overview: Power Mode and Refresh Rate pills above update this simulated preview.</span>
+                <span class="pill-badge pill-subtle mono">Simulated values</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELEMETRY POLICY SIMULATOR -->
+    <section id="telemetry" class="section container">
+      <div class="split-grid">
+        <div>
+          <div class="eyebrow">Telemetry Policy</div>
+          <h2 class="section-title">Active when focused.<br />Paused when backgrounded.</h2>
+          <p class="section-lead">
+            Optional sensor polling runs only while the Project Legion window is focused. Minimizing, hiding, switching away, or leaving a game active suspends optional background timers without issuing stale UI writes.
+          </p>
+
+          <div class="mini-cards">
+            <div class="mini-card">
+              <div class="mini-card-title">Foreground Gating</div>
+              <div class="mini-card-desc">Home and Thermals poll at 1 s and Battery at 5 s only while the window is active.</div>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-title">On-Demand Peripherals</div>
+              <div class="mini-card-desc">Mouse DPI and polling settings are read on demand only—never on a background timer.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" aria-labelledby="sim-heading">
+          <div class="panel-head">
+            <h3 class="panel-title" id="sim-heading">Telemetry Policy Simulator</h3>
+            <div class="segmented" role="group" aria-label="Application state">
+              <button type="button" class="seg-btn seg-btn-card sim-state" data-sim="focused" aria-pressed="true">Focused</button>
+              <button type="button" class="seg-btn seg-btn-card sim-state" data-sim="minimized" aria-pressed="false">Minimized</button>
+              <button type="button" class="seg-btn seg-btn-card sim-state" data-sim="ingame" aria-pressed="false">In-Game</button>
+            </div>
+          </div>
+
+          <div class="sim-tag">
+            <span class="status-dot" id="sim-status-dot" aria-hidden="true"></span>
+            <span>Simulation · Illustrative polling behavior only</span>
+          </div>
+
+          <div class="policy-list">
+            <div class="policy-row">
+              <span class="policy-label">Home &amp; Thermals Sensors</span>
+              <span class="policy-value mono tabular-nums policy-value-ok" id="sim-thermals">Active · 1 s</span>
+            </div>
+            <div class="policy-row">
+              <span class="policy-label">Battery Telemetry</span>
+              <span class="policy-value mono tabular-nums policy-value-ok" id="sim-battery">Active · 5 s</span>
+            </div>
+            <div class="policy-row">
+              <span class="policy-label">Optional GPU / Process Enumeration</span>
+              <span class="policy-value mono" id="sim-gpu">On-Demand Only</span>
+            </div>
+            <div class="policy-row">
+              <span class="policy-label">Mouse Hardware Settings</span>
+              <span class="policy-value mono">On-Demand Only (Never Polled)</span>
+            </div>
+          </div>
+
+          <div class="sim-sample-bar">
+            <span>Simulated poll ticks: <strong class="mono tabular-nums" id="sim-tick-count">0</strong></span>
+            <span>Simulated CPU: <strong class="mono tabular-nums" id="sim-cpu-sample">56 °C</strong> · Battery: <strong class="mono tabular-nums" id="sim-bat-sample">80%</strong></span>
+          </div>
+
+          <p class="sim-note" id="sim-note">
+            While Project Legion is the active foreground window, Home and Thermals poll every 1 s and Battery refreshes every 5 s. Mouse settings remain on-demand only.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LID-OPEN KEYBOARD RESET DEMO -->
+    <section id="lid-reset" class="section container">
+      <div class="split-grid">
+        <div class="panel">
+          <div class="panel-head">
+            <h3 class="panel-title">Lid-Open Keyboard Backlight Reset</h3>
+            <span class="pill-badge pill-subtle mono" id="lid-badge">Lid Closed</span>
+          </div>
+
+          <div class="laptop-stage" id="lid-stage" data-lid="closed" data-backlight="off">
+            <div class="laptop-illustration" aria-hidden="true">
+              <div class="laptop-lid">
+                <div class="laptop-screen">
+                  <span class="laptop-screen-title" id="lid-screen-title">Standby</span>
+                  <span class="laptop-screen-sub mono tabular-nums" id="lid-screen-sub">Click Open to preview sequence</span>
+                </div>
+                <div class="laptop-hinge" style="margin-inline: auto;"></div>
+              </div>
+              <div class="laptop-deck">
+                <div class="kb-zones">
+                  <div class="kb-zone" data-zone="1"></div>
+                  <div class="kb-zone" data-zone="2"></div>
+                  <div class="kb-zone" data-zone="3"></div>
+                  <div class="kb-zone" data-zone="4"></div>
+                </div>
+                <div class="laptop-trackpad"></div>
+              </div>
+            </div>
+
+            <div class="lid-controls">
+              <div class="lid-btn-group">
+                <button type="button" class="btn btn-primary btn-sm" id="lid-open-btn">Open</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="lid-close-btn">Close Lid</button>
+              </div>
+              <span class="lid-status mono tabular-nums" id="lid-status" aria-live="polite">
+                Lid closed · Click Open to simulate reset
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="eyebrow">Hardware Workaround</div>
+          <h2 class="section-title">Recover glitched keyboard lighting on wake.</h2>
+          <p class="section-lead">
+            On some Legion laptops, waking or opening the lid leaves the keyboard backlight stuck or dim. Project Legion includes an <strong>opt-in toggle on the Keyboard page</strong> that automatically resets the lighting controller when the lid opens.
+          </p>
+          <div class="mini-cards">
+            <div class="mini-card">
+              <div class="mini-card-title">1. Backlight Off (5 s)</div>
+              <div class="mini-card-desc">When a lid-open event fires, the backlight turns off for a 5-second settle window.</div>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-title">2. Restore Preset 1</div>
+              <div class="mini-card-desc">After the 5-second countdown completes, Preset 1 is re-applied automatically.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES GRID -->
+    <section id="features" class="section container">
+      <div>
+        <div class="eyebrow">Capabilities</div>
+        <h2 class="section-title">Focused controls across system and peripherals.</h2>
+        <p class="section-lead">Built in native .NET 9 and WPF without web renderers or hidden background services.</p>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"/><path d="M18.36 5.64l-2.12 2.12"/><path d="M21 12h-3"/><path d="M5.64 5.64l2.12 2.12"/><path d="M3 12h3"/><path d="M12 12l4-2"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h3 class="feature-title">Power Modes</h3>
+          <p class="feature-desc">Switch Quiet, Balanced, Performance, or Custom mode with configurable fan points and PL1/PL2 power limits.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+          </div>
+          <h3 class="feature-title">Thermals &amp; Sensors</h3>
+          <p class="feature-desc">View CPU package, GPU temperatures, and fan RPM at a 1 s foreground cadence that pauses when unfocused.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 11v2"/><path d="M7 10v4"/><path d="M11 10v4"/></svg>
+          </div>
+          <h3 class="feature-title">Battery Charge Modes</h3>
+          <p class="feature-desc">Toggle Conservation (80% cap), Normal, or Rapid Charge and monitor battery telemetry every 5 s while focused.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+          </div>
+          <h3 class="feature-title">Display &amp; GPU Modes</h3>
+          <p class="feature-desc">Change internal panel refresh rate, Overdrive, HDR, and Hybrid-Auto MUX policy with on-demand dGPU inspection.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></svg>
+          </div>
+          <h3 class="feature-title">RGB &amp; Spectrum Keyboard</h3>
+          <p class="feature-desc">Configure 4-Zone and Spectrum presets, brightness levels, and the opt-in lid-open Preset 1 backlight reset.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="6"/><path d="M12 7v4"/></svg>
+          </div>
+          <h3 class="feature-title">Mouse &amp; Macros</h3>
+          <p class="feature-desc">Adjust supported mouse DPI stages and polling settings on demand without background hardware polling, plus macros.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+          </div>
+          <h3 class="feature-title">Automation &amp; Packages</h3>
+          <p class="feature-desc">Trigger power, display, or lighting actions on AC, battery, or game events, and manage optional packages cleanly.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3 class="feature-title">Verified Updater</h3>
+          <p class="feature-desc">Verifies asset byte size and SHA-256 before staged handoff, preserves user settings, and retains a rollback backup.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- VERIFIED UPDATER DETAILS -->
+    <section id="updater" class="section container">
+      <div class="safety-card">
+        <div>
+          <div class="eyebrow">01 · Verification</div>
+          <h3 class="safety-step-title">SHA-256 &amp; Size Checked</h3>
+          <p class="safety-step-desc">
+            Downloaded ZIP archives verify byte size and SHA-256 checksum while held open before extraction. Checksums do not establish a trusted publisher; pre-release builds remain unsigned.
+          </p>
+        </div>
+
+        <div>
+          <div class="eyebrow">02 · Staged Handoff</div>
+          <h3 class="safety-step-title">UpdateHost &amp; Protected Staging</h3>
+          <p class="safety-step-desc">
+            Explicit confirmation extracts into a fresh version directory, preserves <code class="inline-code">%LOCALAPPDATA%\ProjectLegion</code>, and leaves the previous version intact.
+          </p>
+        </div>
+
+        <div>
+          <div class="eyebrow">03 · Recovery</div>
+          <h3 class="safety-step-title">Automatic &amp; Manual Rollback</h3>
+          <p class="safety-step-desc">
+            An early exit after updating restarts the retained previous version, alongside explicit one-click rollback inside the Updater page.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD SECTION -->
+    <section id="download" class="section container-narrow download-section">
+      <div class="eyebrow">Windows 10 / 11 (x64)</div>
+      <h2 class="section-title">Download Project Legion</h2>
+      <p class="section-lead">
+        Current version: <strong id="dl-version-label">0.1.5.0 (pre-release, unsigned)</strong>.<br />
+        Always verify the SHA-256 checksum after downloading an unsigned build.
+      </p>
+
+      <div class="pkg-selector">
+        <div class="segmented" role="group" aria-label="Package variant">
+          <button type="button" class="seg-btn pkg-btn" data-pkg="standard" aria-pressed="true">Standard (Framework-Dependent)</button>
+          <button type="button" class="seg-btn pkg-btn" data-pkg="standalone" aria-pressed="false">Standalone (Self-Contained)</button>
+        </div>
+      </div>
+
+      <div class="download-card" id="download-card" data-pkg="standard" data-sha256="PENDING_RELEASE_SHA256_PLACEHOLDER">
+        <div class="download-card-top">
+          <div>
+            <div class="pkg-filename mono" id="pkg-filename">ProjectLegion-win-x64-framework-dependent.zip</div>
+            <div class="pkg-meta" id="pkg-meta">Requires .NET 9 Desktop Runtime (Windows x64) · Size: Pending release</div>
+          </div>
+          <a href="#" class="btn btn-primary btn-md" id="dl-action-btn" aria-disabled="true">Release Asset Pending</a>
+        </div>
+
+        <div class="verify-box">
+          <div class="verify-row">
+            <code class="verify-cmd" id="verify-cmd">Get-FileHash .\ProjectLegion-win-x64-framework-dependent.zip -Algorithm SHA256</code>
+            <button type="button" class="btn btn-secondary btn-sm" id="copy-cmd-btn">Copy</button>
+          </div>
+          <div class="verify-hash-line mono">
+            Expected SHA-256: <span id="expected-hash">PENDING_RELEASE_SHA256_PLACEHOLDER</span>
+          </div>
+        </div>
+
+        <p class="download-note" id="dl-status-note" aria-live="polite">
+          Download URLs and SHA-256 hashes are loaded from <code class="inline-code">downloads.json</code>. Placeholders are shown until release assets are published.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-top">
+        <div>
+          <span class="footer-strong">Project Legion</span> · Unofficial, community-built fork licensed under GPL-3.0. Not affiliated with or endorsed by Lenovo.
+        </div>
+        <div>
+          Upstream project:
+          <a class="footer-link" href="https://github.com/LenovoLegionToolkit-Team/LenovoLegionToolkit" target="_blank" rel="noopener noreferrer">
+            LenovoLegionToolkit (GitHub)
+          </a>
+        </div>
+      </div>
+      <div>
+        Original authors credited by upstream: Bartosz Cichecki, Kaguya, and Dr. Skinner. "Legion" is used solely to describe compatible Lenovo laptops.
+      </div>
+      <div>
+        Privacy: This static site uses no analytics, no trackers, no cookies, no external fonts, and makes no third-party network requests.
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "version": "0.1.5.0",
+  "channel": "pre-release",
+  "signed": false,
+  "statusLabel": "0.1.5.0 (pre-release, unsigned)",
+  "notes": "Placeholder release metadata. Replace each package url, sha256, and size when publishing assets.",
+  "packages": {
+    "standard": {
+      "id": "standard",
+      "name": "Standard",
+      "subtitle": "Framework-dependent — requires .NET 9 Desktop Runtime",
+      "filename": "ProjectLegion-win-x64-framework-dependent.zip",
+      "url": "#",
+      "sha256": "PENDING_RELEASE_SHA256_PLACEHOLDER",
+      "size": "Pending release"
+    },
+    "standalone": {
+      "id": "standalone",
+      "name": "Standalone",
+      "subtitle": "Self-contained — bundles Windows x64 .NET 9 Desktop Runtime",
+      "filename": "ProjectLegion-win-x64-self-contained.zip",
+      "url": "#",
+      "sha256": "PENDING_RELEASE_SHA256_PLACEHOLDER",
+      "size": "Pending release"
+    }
+  }
+}
